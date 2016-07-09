@@ -32,7 +32,7 @@ public class ExampleInvoke : BaseObject, IEventInvoker {
 		
 		//There is also an InvokeEventFast method, which requires you to specify the types involved
 		//But if you call an event multiple times in a frame, this could elicit a small performance improvement
-		Events.InvokeEventFast<IExampleEvent, string, float>("Fast example text!" 20f);
+		Events.InvokeEventFast<IExampleEvent, string, float>("Fast example text!", 20f);
 	}
 }
 ```
