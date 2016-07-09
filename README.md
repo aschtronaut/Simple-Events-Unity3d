@@ -30,9 +30,9 @@ public class ExampleInvoke : BaseObject, IEventInvoker {
 		//We invoke the IExampleEvent from here, and any class that implements that interface will receive the message
 		Events.InvokeEvent<IExampleEvent>("Example text!", 10f);
 		
-		//There is also a InvokeEventFast method, which requires you to specify the types involved
+		//There is also an InvokeEventFast method, which requires you to specify the types involved
 		//But if you call an event multiple times in a frame, this could elicit a small performance improvement
-		Events.InvokeEventFast<string, float>("Fast example text!" 20f);
+		Events.InvokeEventFast<IExampleEvent, string, float>("Fast example text!" 20f);
 	}
 }
 ```
